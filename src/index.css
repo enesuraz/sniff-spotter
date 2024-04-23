@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+
+  min-height: 100vh;
+  background-color: #f3e8d8;
+  color: #242721;
+}
+
+.app {
+  width: 120rem;
+  margin: 5.6rem auto;
+}
+
+/* ************ */
+/* BUTTONS */
+/* ************ */
+
+.btn {
+  border: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn--delete,
+.btn--back {
+  position: absolute;
+  background-color: #f09a92;
+}
+
+.btn--delete {
+  top: 50%;
+  right: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.btn--back {
+  top: 1.2rem;
+  left: 1.2rem;
+}
+
+.btn-secondary {
+  padding: 1rem 4rem;
+  border-radius: 3px;
+  background-color: #242721;
+  color: #f3e8d8;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ************ */
+/* NAVBAR */
+/* ************ */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e3473a;
+  padding: 1.2rem;
+  color: #f3e8d8;
+}
+
+.navbar-logo {
+  font-size: 2.4rem;
+}
+
+/* ************ */
+/* SEARCH */
+/* ************ */
+
+.search-form {
+  flex: 0 0 40%;
+  background-color: #f09a92;
+}
+
+.search-input {
+  background: transparent;
+  width: 100%;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  font-family: inherit;
+  color: #242721;
+  border-radius: 3px;
+  font-size: 2rem;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  color: #474747;
+  transform: translateY(-3px);
+}
+
+/* ************ */
+/* MAIN */
+/* ************ */
+
+.main {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 6.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+  color: #f3e8d8;
+}
+
+.film-box {
+  background-color: #e3473a;
+  height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+/* ************ */
+/* SEARCH LIST */
+/* ************ */
+
+.search-list {
+  list-style: none;
+}
+
+/* ************ */
+/* DOG ITEM */
+/* ************ */
+
+.dog-item {
+  display: flex;
+  gap: 1.2rem;
+  cursor: pointer;
+  padding: 1.2rem;
+  transition: all 0.2s;
+
+  position: relative;
+}
+
+.dog-item img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.dog-details {
+  padding: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ************ */
+/* INFO BOX */
+/* ************ */
+
+.info-box {
+  position: relative;
+}
+
+.info-box img {
+  width: 100%;
+  height: 18rem;
+}
+
+.info-box-details {
+  padding: 0 1.2rem;
+}
+
+.info-name {
+  margin: 1.6rem 0;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 1.2rem;
+  padding: 0 1.2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ************ */
+/* STAT BOX */
+/* ************ */
+
+.stat-info {
+  background-color: #f09a92;
+  padding: 1.2rem;
+  box-shadow: 0 0 2.4rem rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.stat-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 2rem;
+}
+
+.stat-items {
+  margin-top: 1.2rem;
+}
+
+/* ************ */
+/* LOADER */
+/* ************ */
+
+.loader,
+.error {
+  padding: 2.4rem;
+  text-align: center;
+}
+
+/* ************ */
+/* INFO RATE */
+/* ************ */
+
+.info-rate {
+  margin: 2.4rem 0 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+
+  .app {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .app {
+    width: 100%;
+    padding: 0 2.4rem;
+  }
+
+  .dog-details {
+    padding: 0;
+  }
+
+  .info-grid {
+    grid-template-columns: auto;
+  }
+}
